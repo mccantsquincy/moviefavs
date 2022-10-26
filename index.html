@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Movies</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/af07371b52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <!-- bg image -->
+      <figure class="hero__img">
+                <!-- <img src="./assets/brett-jordan-4Aqnfmlx1EM-unsplash.jpg" alt="dvds"> -->
+        <!-- nav start -->
+        <nav>
+        <div class="row nav__row">
+            <div class="logo">
+                Movie<b class="bold brand__color">Favs</b>
+            </div>
+            <ul class="nav__link--list">
+                <li class="nav__links">
+                    <a href="" class="nav__link nav__link--hover-effect no-drop">Home</a>
+                </li>
+                <li class="nav__links">
+                    <a href="" class="nav__link nav__link--hover-effect no-drop">Find movies</a>
+                </li>
+                <li class="nav__links">
+                    <a href="" class="nav__link nav__link--primary-btn no-drop">Contact</a>
+                </li>
+            </ul>
+        <!-- mobile nav -->
+        <button class="burger__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        </div>
+        <div class="mobile__menu--backdrop">
+            <button class="mobile__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="mobile__nav__link--list">
+                <li class="mobile__nav__links">
+                    <a class="mobile__nav__link no-drop" href="">Home</a>
+                </li>
+                <li class="mobile__nav__links">
+                    <a class="mobile__nav__link no-drop" href="">Find movies</a>
+                </li>
+                <li class="mobile__nav__links nav__link--primary-btn">
+                    <a class="mobile__nav__link mobile__cta no-drop" href="">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        
+
+        </nav>
+         <!-- search start -->
+        <div class="container">
+            <div class="row search__row">
+                <h1 class="search__title">
+                    Browse <span class="brand__color">movies</span> here.
+                </h1>
+                <div class="search__bar">
+                   <input type="text" class="input__field" placeholder="Search movies..." onkeyup="userSearchInput(event)">
+                   <button id='searchBtn' class="search__btn search__bar--icon"><i class="fas fa-search" onclick="userSearchBtn()"></i></button>
+                </div>
+            </div>
+        </div>
+      </figure>
+    </header>
+    <main>
+     <!-- movies section  start -->
+      <section class="movies__section">
+        <div class="container">
+            <div class="row">
+                <div class="search__filter">
+                    <h2 class="search">Search results for:</h2>
+                    <!-- <select id="filter-movies" class="filter" onchange="filterMovies(event)">
+                      <option value="" disabled selected>Sort</option>
+                      <option value="OLD__TO__NEW">Year , Old to New</option>
+                      <option value="NEW__TO__OLD">Year , New to Old</option>
+                    </select> -->
+                </div>
+                <div class="movies__list--wrapper">
+                    <div class="loading">
+                       <i class="fas fa-spinner"></i>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+            <div class="footer__wrapper">
+                <div class="logo footer__logo">
+                    Movie<b class="bold brand__color">Favs</b>
+                </div>
+                <div>
+                    <p class="footer__content">Project by Quincy McCants</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
