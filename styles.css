@@ -229,25 +229,27 @@ input {
     justify-content: start;
 }
 
-.loading {
+.movies__loading {
   display: flex;
   align-items: center;
   justify-content: center !important;
   margin-top: 60px;
-  visibility: hidden;
   color: rgb(240, 238, 238);
   font-size: 40px;
-  animation: rotate 1000ms infinite ease;
 }
 
-.display {
-    display: flex;
-    justify-content: center;
+.movies__loading--spinner {
+  display: none !important;
+}  
+
+.movies__loading .movies__loading--spinner {
+  display: block !important;
 }
 
-.loading.display {
-  visibility: visible;
+.fa-spinner {
+  animation: rotate 800ms infinite ease;
 }
+
 
 @keyframes rotate {
     0% {
