@@ -1,6 +1,7 @@
 // http://www.omdbapi.com/?apikey=[yourkey]&
 // http://www.omdbapi.com/?i=tt3896198&apikey=91703714
 // 91703714
+// `http://www.omdbapi.com/?i=tt3896198&apikey=91703714&s=${title}`
 
 /**   ---------------------------------------------------------------- */
 
@@ -34,7 +35,7 @@ function userSearchBtn() {
 
 async function renderMovies(title) {
   const movies = await fetch(
-    `http://www.omdbapi.com/?i=tt3896198&apikey=91703714&s=${title}`
+    `https://omdbapi.com/?type=movie&apikey=91703714&s=${title}`
   );
   moviesData = await movies.json();
   const films = moviesData.Search.slice(0, 6);
