@@ -9,9 +9,9 @@ const movieWrapperEl = document.querySelector(".movies__list--wrapper");
 const movieWrapper = document.getElementById("movie__wrapper")
 const userInput = document.querySelector(".input__field");
 const userBtn = document.querySelector(".search__btn");
-const enter = document.getElementById("input")
 const searchResults = document.querySelector(".search");
 let title;
+
 
 function openMenu() {
   document.body.classList += " menu--open";
@@ -21,6 +21,7 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
+
 function userSearchInput(event) {
   title = document.body.querySelector(".input__field").value;
   if(event.keyCode == 13) {
@@ -29,23 +30,19 @@ function userSearchInput(event) {
   }
 }
 
+
 function userSearchBtn(event) {
   movieWrapper.classList += " show__loading--state";
   movieWrapper.classList.remove("show__movies")
   const searchResultsHTML = `<h2 class="search">Search results for: <span class="brand__color">   ${title} </span> </h2>`;
   searchResults.innerHTML = searchResultsHTML;
   renderMovies(title);
+  
   setTimeout(() => { 
-   
-  movieWrapper.classList += " show__movies"
-  movieWrapper.classList.remove("show__loading--state") ;
-  
+    movieWrapper.classList += " show__movies"
+    movieWrapper.classList.remove("show__loading--state") 
   }, 1500);
-  
-  
-  
 }
-
 
 
 async function renderMovies(title) {
@@ -56,6 +53,7 @@ async function renderMovies(title) {
   const films = moviesData.Search.slice(0, 6);
   movieWrapperEl.innerHTML = films.map((movie) => moviesHTML(movie)).join("");
 }
+
 
 function moviesHTML(movie) {
   return `<div class="movie__wrapper">
