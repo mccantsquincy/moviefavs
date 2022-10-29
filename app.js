@@ -6,8 +6,10 @@
 /**   ---------------------------------------------------------------- */
 
 const movieWrapperEl = document.querySelector(".movies__list--wrapper");
+const movieWrapper = document.getElementById("movie__wrapper")
 const userInput = document.querySelector(".input__field");
 const userBtn = document.querySelector(".search__btn");
+const enter = document.getElementById("input")
 const searchResults = document.querySelector(".search");
 let title;
 
@@ -21,17 +23,30 @@ function closeMenu() {
 
 function userSearchInput(event) {
   title = document.body.querySelector(".input__field").value;
+  if(event.keyCode == 13) {
+    console.log("enter button pressed")
+    userSearchBtn()
+  }
 }
 
-function userSearchBtn() {
-  movieWrapperEl.classList += " movies__loading";
+function userSearchBtn(event) {
+  movieWrapper.classList += " show__loading--state";
+  movieWrapper.classList.remove("show__movies")
   const searchResultsHTML = `<h2 class="search">Search results for: <span class="brand__color">   ${title} </span> </h2>`;
   searchResults.innerHTML = searchResultsHTML;
-  setTimeout(() => {
-    renderMovies(title);
-    movieWrapperEl.classList.remove("movies__loading");
+  renderMovies(title);
+  setTimeout(() => { 
+   
+  movieWrapper.classList += " show__movies"
+  movieWrapper.classList.remove("show__loading--state") ;
+  
   }, 1500);
+  
+  
+  
 }
+
+
 
 async function renderMovies(title) {
   const movies = await fetch(
