@@ -386,7 +386,7 @@ img {
   }
 
   .movie__wrapper {
-    width: calc(100% / 1);
+    width: calc(100% / 2);
   }
 
   .movie__card {
