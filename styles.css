@@ -21,6 +21,8 @@
 
 li {
   list-style-type: none;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 a {
@@ -212,13 +214,14 @@ input {
 .movies__section {
   background-color: #0d0c0c;
   min-height: 100vh;
+  display: none;
 }
 
 .movies__list--wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  display: none;
+  display: flex !important;
   flex-wrap: wrap;
   justify-content: start;
 }
@@ -315,6 +318,7 @@ img {
 
 #footer {
   background-color: #000;
+  height: 50vh;
 }
 
 .footer__wrapper {
@@ -392,4 +396,18 @@ img {
   .movie__card {
     max-height: 550px;
   }
+}
+
+#loading{
+  text-align: center !important;
+  font-size: 40pt;
+  display: none;
+}
+
+.display{
+  display: block;
+}
+
+.close{
+  display: none;
 }

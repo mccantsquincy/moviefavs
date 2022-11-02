@@ -22,13 +22,13 @@
             </div>
             <ul class="nav__link--list">
                 <li class="nav__links">
-                    <a href="" class="nav__link nav__link--hover-effect no-drop">Home</a>
+                    <a href="" class="nav__link nav__link--primary-btn no-drop">Home</a>
                 </li>
                 <li class="nav__links">
                     <a href="" class="nav__link nav__link--hover-effect no-drop">Find movies</a>
                 </li>
                 <li class="nav__links">
-                    <a href="" class="nav__link nav__link--primary-btn no-drop">Contact</a>
+                    <a href="" class="nav__link nav__link--hover-effect no-drop">Contact</a>
                 </li>
             </ul>
         <!-- mobile nav -->
@@ -41,19 +41,17 @@
                 <i class="fas fa-times"></i>
             </button>
             <ul class="mobile__nav__link--list">
-                <li class="mobile__nav__links">
+                <li class="mobile__nav__links nav__link--primary-btn">
                     <a class="mobile__nav__link no-drop" href="">Home</a>
                 </li>
                 <li class="mobile__nav__links">
                     <a class="mobile__nav__link no-drop" href="">Find movies</a>
                 </li>
-                <li class="mobile__nav__links nav__link--primary-btn">
+                <li class="mobile__nav__links">
                     <a class="mobile__nav__link mobile__cta no-drop" href="">Contact</a>
                 </li>
             </ul>
         </div>
-        
-        
 
         </nav>
          <!-- search start -->
@@ -78,8 +76,11 @@
                 <div class="search__filter">
                     <h2 class="search">Search results for:</h2>
                 </div>
+                <div id="loading">
+                    <p><i class="fas fa-spinner"></i></p>
+                </div>
                 <div id="movie__wrapper" class="">
-                        <i class="fas fa-spinner movies__loading--spinner"></i>
+                        
                         <div class="movies__list--wrapper">
                         </div>
                 </div>
